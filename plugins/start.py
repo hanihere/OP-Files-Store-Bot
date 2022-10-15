@@ -182,7 +182,7 @@ async def send_text(client: Bot, message: Message):
                 pass
             total += 1
         
-        status = f"""<b>𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳
+        status = f"""<b>Broadcast Completed
 
 Total users: {total}
 Successful: {successful}
