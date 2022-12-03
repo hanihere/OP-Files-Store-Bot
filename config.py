@@ -3,30 +3,30 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = environ['TG_BOT_TOKEN']
 
 #Your API ID from my.telegram.org
-APP_ID = float(os.environ.get("APP_ID", ""))
+APP_ID = int(environ['APP_ID'])
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = environ['API_HASH']
 
 #Your db channel Id
-CHANNEL_ID = float(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(environ['CHANNEL_ID'])
 
 #OWNER ID
-OWNER_ID = float(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(environ['OWNER_ID'])
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = environ['DATABASE_URL']
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(environ['FORCE_SUB_CHANNEL'])
 
-TG_BOT_WORKERS = float(os.environ.get("TG_BOT_WORKERS", "4"))
+TG_BOT_WORKERS = int(environ("TG_BOT_WORKERS", ""))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
